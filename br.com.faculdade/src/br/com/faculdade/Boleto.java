@@ -13,10 +13,11 @@ public class Boleto {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int codigoBoleto;
 	
-	@NotNull(message="Valor n„o pode ficar vazio.")
+	@NotNull(message="Valor n√£o pode ficar vazio.")
 	private Double valor;
 	
-	@NotNull(message="A data do vencimento n„o pode ficar vazia.")
+	@NotNull(message="A data do vencimento n√£o pode ficar vazia.")
+	@Temporal(TemporalType.DATE)
 	private Date dataVecimento;
 	
 	@Null
